@@ -32,7 +32,6 @@ Open [Releases](https://github.com/itsMohammedAli/ds2-launcher-releases/releases
 | Asset | What to use it for |
 | --- | --- |
 | **`ds2-sotfs-launcher-…-online.zip`** | **Use this for a fresh install or manual upgrade.** Contains the launcher; the mod downloads from its official source when needed. |
-| `ds2-sotfs-launcher-….zip` without `-online` | Compatibility package selected automatically by older launchers during an upgrade. |
 | Source code archives | GitHub repository snapshots, not an installable launcher. |
 
 ## Installation
@@ -42,12 +41,16 @@ Open [Releases](https://github.com/itsMohammedAli/ds2-launcher-releases/releases
 3. Extract the ZIP's **Launcher** folder directly into **Game**. Replace matching launcher files if upgrading.
 4. Open **`Game/Launcher/ds2_sotfs_launcher.exe`**.
 
-Your folders should look like this immediately after extraction:
+After the first co-op installation, your folders should look like this:
 
 ```text
 Dark Souls II Scholar of the First Sin/
 └── Game/
     ├── DarkSoulsII.exe
+    ├── ds2sc_launcher.exe
+    ├── SeamlessCoop/
+    │   ├── ds2sc.dll
+    │   └── ds2sc_settings.ini
     └── Launcher/
         ├── ds2_sotfs_launcher.exe
         ├── flutter_windows.dll
@@ -58,10 +61,17 @@ Dark Souls II Scholar of the First Sin/
         ├── seamless_coop/
         │   └── install-release.ps1
         ├── updater/
+        │   └── install-update.ps1
         └── readme.txt
 ```
 
 Keep all launcher files together. Avoid nesting another **Launcher** folder inside **Launcher**.
+The ZIP contains only **Launcher**. **ds2sc_launcher.exe** and the game's
+**SeamlessCoop** folder are created automatically by the first official mod download.
+Release downloads now include only the **`-online.zip`** launcher package.
+**`Launcher/seamless_coop`** contains the download/install helper script. It is
+separate from **`Game/SeamlessCoop`**, which contains the installed mod. The old
+bundled copy at **`Launcher/bundles/seamless_coop`** has been removed.
 
 ### First co-op launch and password
 
